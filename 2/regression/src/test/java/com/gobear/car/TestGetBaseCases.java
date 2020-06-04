@@ -12,5 +12,6 @@ public class TestGetBaseCases extends AbstractTest {
         getBaseCases.expectResponseStatus(HttpResponseStatusType.OK_200);
 
         getBaseCases.callAPI();
+        getBaseCases.validateResponseAgainstJSONSchema(GetBaseCases.RS_SCHEMA);
     }
 }

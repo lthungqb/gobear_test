@@ -1,0 +1,93 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "AutofillDigitSetting": {
+      "type": "object",
+      "properties": {
+        "BaseCase_Usage": {
+          "type": "string"
+        },
+        "BaseCase_StillPaying": {
+          "type": "boolean"
+        },
+        "BaseCase_Make": {
+          "type": "string"
+        },
+        "BaseCase_BodyType": {
+          "type": "string"
+        },
+        "BaseCase_Year": {
+          "type": "integer"
+        },
+        "BaseCase_Model": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "BaseCase_Usage",
+        "BaseCase_StillPaying",
+        "BaseCase_Make",
+        "BaseCase_BodyType",
+        "BaseCase_Year",
+        "BaseCase_Model"
+      ]
+    },
+    "CarYear": {
+      "type": "integer"
+    },
+    "CarMakeID": {
+      "type": "string"
+    },
+    "CarModelID": {
+      "type": "string"
+    },
+    "CarBodyTypeID": {
+      "type": "string"
+    },
+    "IsPrivate": {
+      "type": "boolean"
+    },
+    "IsStillPaying": {
+      "type": "boolean"
+    },
+    "PaidOptions": {
+      "type": "null"
+    },
+    "AvailableValues_VTPL": {
+      "type": "array",
+      "items": [
+        {
+          "type": "number"
+        },
+        {
+          "type": "number"
+        },
+        {
+          "type": "number"
+        },
+        {
+          "type": "number"
+        },
+        {
+          "type": "number"
+        }
+      ]
+    },
+    "DefaultValue_VTPL": {
+      "type": "number"
+    }
+  },
+  "required": [
+    "AutofillDigitSetting",
+    "CarYear",
+    "CarMakeID",
+    "CarModelID",
+    "CarBodyTypeID",
+    "IsPrivate",
+    "IsStillPaying",
+    "PaidOptions",
+    "AvailableValues_VTPL",
+    "DefaultValue_VTPL"
+  ]
+}
