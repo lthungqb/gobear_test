@@ -1,6 +1,7 @@
 package com.gobear.car.Utils;
 
 import com.gobear.car.GetCarMakes;
+import com.gobear.car.GetCarModels;
 import com.gobear.car.GetYears;
 import com.jayway.jsonpath.JsonPath;
 import com.qaprosoft.carina.core.foundation.api.http.HttpResponseStatusType;
@@ -26,5 +27,13 @@ public class Car {
         getCarMakes.addUrlParameter("year", year);
 
         return JsonPath.parse(getCarMakes.callAPI().asString()).read("CarMakes").toString();
+    }
+
+    public static String getCarModelId(String year, String carId) {
+        GetCarModels getCarModels = new GetCarModels(carId);
+        getCarModels.expectResponseStatus(HttpResponseStatusType.OK_200);
+        getCarModels.addUrlParameter("year", year);
+
+        return JsonPath.parse(getCarModels.callAPI().asString()).read("CarModels").toString();
     }
 }
