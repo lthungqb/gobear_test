@@ -1,0 +1,29 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "CarMakes": {
+      "type": "array",
+      "items": [
+        {
+          "type": "object",
+          "properties": {
+            "ID": {
+              "type": "string"
+            },
+            "Name": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "ID",
+            "Name"
+          ]
+        }
+      ]
+    }
+  },
+  "required": [
+    "CarMakes"
+  ]
+}
