@@ -3,6 +3,7 @@ package com.gobear.car;
 import com.gobear.car.Utils.Car;
 import com.qaprosoft.carina.core.foundation.AbstractTest;
 import com.qaprosoft.carina.core.foundation.api.http.HttpResponseStatusType;
+import gherkin.lexer.Ca;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.testng.annotations.DataProvider;
@@ -25,19 +26,12 @@ public class TestGetCarModels extends AbstractTest {
 
     @DataProvider(name = "getCarIds")
     private Object[][] getCarIds() throws JSONException {
+        String randomYear = Car.getRandomYears();
 
-        Random r = new Random();
-        JSONArray yearList = new JSONArray(Car.getYears());
-        String randomYear = yearList.getString(r.nextInt(yearList.length()-1));
-
-        JSONArray carIdList = new JSONArray(Car.getCarIds(randomYear));
-        Object[][] carIds = new Object[5][2];
-
-        for (int i = 0; i < 5; i++) {
-            carIds[i][0] = randomYear;
-            carIds[i][1] = carIdList.getJSONObject(i).getString("ID");
-        }
-        return carIds;
+        return new Object[][] {
+                {randomYear, Car.getRandomCarMakeIds(randomYear)},
+                {randomYear, Car.getRandomCarMakeIds(randomYear)}
+        };
     }
 
 }

@@ -26,27 +26,13 @@ public class TestGetCarVarients extends AbstractTest {
 
     @DataProvider(name = "getCarModelId")
     private Object[][] getCarModelId() throws JSONException {
+        String randomYear = Car.getRandomYears();
+        String randomCareMakeId = Car.getRandomCarMakeIds(randomYear);
 
-        Random r = new Random();
+        return new Object[][] {
+                {randomYear, randomCareMakeId, Car.getRandomCarModelId(randomYear, randomCareMakeId)}
+        };
 
-        JSONArray yearList = new JSONArray(Car.getYears());
-        String randomYear = yearList.getString(r.nextInt(yearList.length()-1));
-
-        JSONArray carIdList = new JSONArray(Car.getCarIds(randomYear));
-        String randomCarId = carIdList.getJSONObject(r.nextInt(carIdList.length()-1)).getString("ID");
-
-        JSONArray carModelList = new JSONArray(Car.getCarModelId(randomYear, randomCarId));
-
-        int noOfTest = r.nextInt(carModelList.length() - 1)+1;
-        Object[][] carModelIds = new Object[noOfTest][3];
-
-        for (int i = 0; i < noOfTest; i++) {
-            carModelIds[i][0] = randomYear;
-            carModelIds[i][1] = randomCarId;
-            carModelIds[i][2] = carModelList.getJSONObject(i).getString("ID");
-
-        }
-        return carModelIds;
     }
 
 }

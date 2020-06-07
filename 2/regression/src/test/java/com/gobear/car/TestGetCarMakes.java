@@ -24,15 +24,12 @@ public class TestGetCarMakes extends AbstractTest {
 
     @DataProvider(name = "getYear")
     private Object[][] getYear() throws JSONException {
-
-        JSONArray yearsList = new JSONArray(Car.getYears());
-
-        Object[][] years = new Object[yearsList.length()][1];
-
-        for (int i = 0; i < yearsList.length(); i++) {
-            years[i][0] = yearsList.getString(i);
-        }
-        return years;
+        return new Object[][] {
+                {Car.getRandomYears()},
+                {Car.getRandomYears()},
+                {Car.getRandomYears()},
+                {Car.getRandomYears()},
+        };
     }
 
 }
