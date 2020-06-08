@@ -1,0 +1,10 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite verbose="1" name="gobear Interview Tests - Cars Insurances APIs" parallel="methods" thread-count="5">
+
+	<test name="Cars Insurances API Tests">
+		<packages>
+			<package name="com.gobear.car"/>
+		</packages>
+	</test>
+
+</suite>
