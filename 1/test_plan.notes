@@ -2,6 +2,7 @@
 	- Car insurance feature on website (Functional)
 	- Regression testing
 	- For mobile and desktop
+
 2. Out of scope
 	- other features
 	- new feature for Car insurance
@@ -28,7 +29,7 @@
 	- Pre-production trigger every release
 
 8. Reporting
-	- How to report
+	- How to report?
 
 9. Test Tools
 	- Selenium
@@ -43,6 +44,14 @@
 Test architecture
 - we could apply data driven or behavior driven for the testing
 - For UI testing I choose POM (Page Object Model) to be the main architecture of this project. 
+
+
+==================================================
+Question list
+	- How to report?
+	- Resources?
+	- Dead line
+	- 
 
 
 
