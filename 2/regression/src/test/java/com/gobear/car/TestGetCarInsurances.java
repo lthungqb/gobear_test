@@ -8,6 +8,7 @@ import org.json.JSONException;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
+import javax.ws.rs.GET;
 import java.util.Random;
 
 @Test
@@ -36,7 +37,9 @@ public class TestGetCarInsurances extends AbstractTest {
         getCarInsurances.addUrlParameter("classification", classification);
         getCarInsurances.addUrlParameter("coverageValue_VTPL", coverageValue_VTPL);
 
-        getCarInsurances.callAPI();
+        String rs = getCarInsurances.callAPI().asString();
+        if (!rs.equals("null"))
+            getCarInsurances.validateResponseAgainstJSONSchema(GetCarInsurances.RS_SCHEMA);
     }
 
 
@@ -48,7 +51,9 @@ public class TestGetCarInsurances extends AbstractTest {
         String randonCarBodyTypeId = Car.getRandomCarBodyTypeId(randomCarYear, randomCarMakeId, randomCarModelId);
 
         return new Object[][] {
-                {randomCarYear, randomCarMakeId, randomCarModelId, randonCarBodyTypeId, false, true, "1160000", "1160000", true, false, false, "1", "200000"}
+                // {carYear, carMakeId, carModelId, carBodyTypeId, isPrivateUsage, isStillPaying, sumInsured, fmv, requestAon, requestPa, requestRa, classification, CoverageValue_VTPL}
+                {randomCarYear, randomCarMakeId, randomCarModelId, randonCarBodyTypeId, false, true, "1160000", "1160000", true, false, false, "1", "200000"},
+                {randomCarYear, randomCarMakeId, randomCarModelId, randonCarBodyTypeId, true, true, "1160000", "1160000", true, false, false, "1", "200000"}
         };
     }
 

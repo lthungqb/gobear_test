@@ -8,6 +8,7 @@ import java.util.Properties;
 public class GetCarInsurances extends AbstractApiMethodV2 {
 
     // Define template
+    public static final String RS_SCHEMA = "template/GetInsurances/rs.schema";
 
     // Constructors
 

@@ -1,0 +1,197 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "Insurances": {
+      "type": "array",
+      "items": [
+        {
+          "type": "object",
+          "properties": {
+            "InsurerID": {
+              "type": "string"
+            },
+            "InsurerName": {
+              "type": "string"
+            },
+            "InsurerSmallLogo": {
+              "type": "string"
+            },
+            "PlanID": {
+              "type": "string"
+            },
+            "PlanName": {
+              "type": "string"
+            },
+            "Premium": {
+              "type": "number"
+            },
+            "OriginalPremium": {
+              "type": "number"
+            },
+            "DiscountValue": {
+              "type": "number"
+            },
+            "DiscountUnit": {
+              "type": "null"
+            },
+            "DiscountUntill": {
+              "type": "null"
+            },
+            "HasQuotes": {
+              "type": "boolean"
+            },
+            "PromotionID": {
+              "type": "null"
+            },
+            "PromotionTitle": {
+              "type": "null"
+            },
+            "PromotionContent": {
+              "type": "null"
+            },
+            "TopCoverages": {
+              "type": "array",
+              "items": [
+                {
+                  "type": "object",
+                  "properties": {
+                    "Code": {
+                      "type": "string"
+                    },
+                    "Title": {
+                      "type": "string"
+                    },
+                    "Content": {
+                      "type": "string"
+                    },
+                    "Value": {
+                      "type": "number"
+                    }
+                  },
+                  "required": [
+                    "Code",
+                    "Title",
+                    "Content",
+                    "Value"
+                  ]
+                }
+              ]
+            },
+            "CheckoutOptions": {
+              "type": "array",
+              "items": [
+                {
+                  "type": "object",
+                  "properties": {
+                    "PaymentModel": {
+                      "type": "integer"
+                    },
+                    "SupplierID": {
+                      "type": "string"
+                    },
+                    "SupplierName": {
+                      "type": "string"
+                    },
+                    "SupplierLogo": {
+                      "type": "string"
+                    },
+                    "IsBroker": {
+                      "type": "boolean"
+                    },
+                    "Link": {
+                      "type": "string"
+                    },
+                    "Premium": {
+                      "type": "number"
+                    },
+                    "SKUCode": {
+                      "type": "null"
+                    },
+                    "CheckoutNotes": {
+                      "type": "null"
+                    }
+                  },
+                  "required": [
+                    "PaymentModel",
+                    "SupplierID",
+                    "SupplierName",
+                    "SupplierLogo",
+                    "IsBroker",
+                    "Link",
+                    "Premium",
+                    "SKUCode",
+                    "CheckoutNotes"
+                  ]
+                }
+              ]
+            },
+            "HasPaidOptions": {
+              "type": "boolean"
+            },
+            "SelectedPaidOptionsCount": {
+              "type": "integer"
+            },
+            "SelectedPaidOptions": {
+              "type": "array",
+              "items": [
+                {
+                  "type": "array",
+                  "items": [
+                    {
+                      "type": "object",
+                      "properties": {
+                        "ID": {
+                          "type": "string"
+                        },
+                        "SelectedValue": {
+                          "type": "null"
+                        }
+                      },
+                      "required": [
+                        "ID",
+                        "SelectedValue"
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            "DocumentLink": {
+              "type": "null"
+            },
+            "TotalPaidOptionsCount": {
+              "type": "integer"
+            }
+          },
+          "required": [
+            "InsurerID",
+            "InsurerName",
+            "InsurerSmallLogo",
+            "PlanID",
+            "PlanName",
+            "Premium",
+            "OriginalPremium",
+            "DiscountValue",
+            "DiscountUnit",
+            "DiscountUntill",
+            "HasQuotes",
+            "PromotionID",
+            "PromotionTitle",
+            "PromotionContent",
+            "TopCoverages",
+            "CheckoutOptions",
+            "HasPaidOptions",
+            "SelectedPaidOptionsCount",
+            "SelectedPaidOptions",
+            "DocumentLink",
+            "TotalPaidOptionsCount"
+          ]
+        }
+      ]
+    }
+  },
+  "required": [
+    "Insurances"
+  ]
+}

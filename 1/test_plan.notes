@@ -1,0 +1,48 @@
+1. Scope of testing
+	- Car insurance feature on website (Functional)
+	- Regression testing
+	- For mobile and desktop
+2. Out of scope
+	- other features
+	- new feature for Car insurance
+	- Non-functional testing
+
+3. Test type
+	- API testing
+	- UI testing
+
+4. Risk & Issues
+	- As a new member of team so tester could lack feature/product knowledge
+	- Tools, framework could have limitation. 
+
+5. Test objectives
+	- Prevent new change impact current Car insurance behavior
+	- Feeback as soon as possible when issue happen
+
+6. Exit criteria
+	- 100% test cases pass
+
+7. Environments
+	- Test trigger after every deployment
+	- Beta trigger after every deployment
+	- Pre-production trigger every release
+
+8. Reporting
+	- How to report
+
+9. Test Tools
+	- Selenium
+	- Carina framework
+	- Java
+	- Jenkin/CI -> test schedule
+	- IntelliJ -> IDE
+
+10. Resources
+
+==================================================
+Test architecture
+- we could apply data driven or behavior driven for the testing
+- For UI testing I choose POM (Page Object Model) to be the main architecture of this project. 
+
+
+
